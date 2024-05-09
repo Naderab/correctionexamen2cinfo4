@@ -1,0 +1,7 @@
+<table>
+    <tr *ngFor="let m of menus">
+        <td>{{m.title}}</td>
+        <td><a [routerLink]="['/menu/',m.id]">To details</a></td>
+        <td><button (click)="reserver(m.id)">Réserver</button></td>
+    </tr>
+</table>

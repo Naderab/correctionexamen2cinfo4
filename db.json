@@ -1,0 +1,26 @@
+{
+  "menu": [
+    {
+      "title": "Menu2",
+      "image": "menu2.png",
+      "description": "Description menu 2",
+      "approved": true,
+      "reservations": [
+        1,
+        1
+      ],
+      "id": 4
+    },
+     {
+      "title": "Menu3",
+      "image": "menu2.png",
+      "description": "Description menu 2",
+      "approved": true,
+      "reservations": [
+        2
+       
+      ],
+      "id": 5
+    }
+  ]
+}

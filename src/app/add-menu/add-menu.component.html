@@ -1,0 +1,22 @@
+<form [formGroup]="menu">
+    Title : <input formControlName="title">
+    <div *ngIf="menu.get('title')!.invalid && (menu.get('title')!.touched || menu.get('title')!.dirty)">
+        <div *ngIf="menu.get('title')!.errors!['required']">
+            Title is required
+        </div>
+        <div *ngIf="menu.get('title')!.errors!['pattern']">
+            Title is invalid
+        </div>
+    </div>
+    Image : <input formControlName="image">
+    Description : <input formControlName="description">
+    <div *ngIf="menu.get('description')!.invalid && (menu.get('description')!.touched || menu.get('description')!.dirty)">
+        <div *ngIf="menu.get('description')!.errors!['required']">
+            Description is required
+        </div>
+        <div *ngIf="menu.get('description')!.errors!['minlength']">
+            Description is  invalid
+        </div>
+    </div>
+    <input type="submit" [disabled]="menu.invalid" (click)="add()">
+</form>
